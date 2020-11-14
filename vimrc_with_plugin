@@ -1,0 +1,106 @@
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mkitt/tabline.vim'
+call plug#end()
+
+syntax on
+set termguicolors
+colorscheme monokai
+
+"Indention Option"
+set autoindent
+set expandtab
+set shiftround
+set smarttab
+set tabstop=4
+set shiftwidth=4
+
+"Search Option"
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set showmatch
+
+"Performance Option"
+set complete-=5
+set lazyredraw
+
+"Text Rendering Option"
+set display+=lastline
+set linebreak
+set scrolloff=1
+set sidescrolloff=5
+set wrap
+set fileencodings=utf8,euc-kr
+
+"UI Option"
+set laststatus=2
+set ruler
+set title
+set wildmenu
+set nu
+set mouse=a
+set cursorline
+set noerrorbells
+set visualbell
+set cmdheight=2
+
+"Miscellaneous Option"
+set autoread
+set backspace=indent,eol,start
+set confirm
+set hidden
+set history=1000
+set autowrite
+set shell=/bin/bash
+set nostartofline
+set nobackup
+set wmnu
+let mapleader='`'
+nmap <C-L><C-L> :set invrelativenumber<CR>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+
+" NERDTree Option "
+" autocmd StdinReadPre * let s:std_in=1 "
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+" Airline Option "
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod =':t'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols "
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols "
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+
