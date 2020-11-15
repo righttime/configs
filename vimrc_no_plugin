@@ -1,3 +1,4 @@
+filetype on
 syntax on
 set termguicolors
 colorscheme monokai
@@ -16,6 +17,7 @@ set ignorecase
 set incsearch
 set smartcase
 set showmatch
+highlight MatchParen   guifg=red guibg=bg gui=bold
 
 "Performance Option"
 set complete-=5
@@ -52,7 +54,9 @@ set shell=/bin/bash
 set nostartofline
 set nobackup
 set wmnu
+
 let mapleader='`'
 nmap <C-L><C-L> :set invrelativenumber<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
+au FileType python nmap <buffer> <F5> :!python %<CR>
