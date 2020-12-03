@@ -2,13 +2,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
 Plug 'mkitt/tabline.vim'
 call plug#end()
 
 filetype on
 syntax on
 set termguicolors
-colorscheme monokai
+"colorscheme monokai
+set background=dark
+colorscheme solarized
 
 "Indention Option"
 set autoindent
@@ -80,7 +83,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod =':t'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 1
-
+let g:airline_theme = 'dark'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
