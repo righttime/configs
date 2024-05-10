@@ -43,7 +43,7 @@
             "{{ if gt .Ahead 0 }}#89d1dc{{ end }}",
             "{{ if gt .Behind 0 }}#f17c37{{ end }}"
           ],
-          "foreground": "#48ed0b",
+          "foreground": "#0a0a0a",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
