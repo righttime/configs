@@ -9,10 +9,10 @@
           "foreground": "#fff",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "windows": "\uf179"
+            "windows": "\uf489"
           },
-          "style": "powerline",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+          "style": "diamond",
+          "template": " {{.Icon}} ",
           "type": "os"
         },
         {
@@ -20,7 +20,7 @@
           "foreground": "#d2ff5e",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": "{{ .UserName }} ",
+          "template":"{{ .UserName }} ",
           "type": "session"
         },
         {
@@ -32,7 +32,7 @@
             "style": "full"
           },
           "style": "powerline",
-          "template": " \ue5ff {{ .Path }} ",
+          "template": " \uf114  {{ .Path }} ",
           "type": "path"
         },
         {
@@ -43,7 +43,7 @@
             "{{ if gt .Ahead 0 }}#89d1dc{{ end }}",
             "{{ if gt .Behind 0 }}#f17c37{{ end }}"
           ],
-          "foreground": "#0a0a0a",
+          "foreground": "#161815",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
